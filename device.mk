@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -131,6 +132,10 @@ PRODUCT_COPY_FILES += \
 #Hostapd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd:system/bin/hw/hostapd
+
+# IFAA manager
+PRODUCT_PACKAGES += \
+    org.ifaa.android.manager
 
 #Light
 PRODUCT_PACKAGES += \
