@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2019 The LineageOS Project
  *
@@ -14,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona"
+#define LOG_TAG "lineage.biometrics.fingerprint.inscreen@1.0-service.lmi"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
