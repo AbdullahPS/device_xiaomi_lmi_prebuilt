@@ -117,13 +117,12 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
-
-    
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
+    $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 
-#HOSTPAD
+#Hostapd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd:system/bin/hw/hostapd
 
@@ -233,8 +232,3 @@ BOARD_BUILD_PRODUCT_IMAGE := true
 # WiFi Tethering
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0
-    
- #Build with gapps needs this clone https://gitlab.com/kang-os-r/vendor_gapps
- ifeq ($(BUILD_GAPPS),true)
-   $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
- endif
